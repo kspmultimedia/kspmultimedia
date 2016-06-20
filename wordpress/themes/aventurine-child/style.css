@@ -1,0 +1,136 @@
+ /*
+ Theme Name:   Aventurine Theme Child
+ Theme URI:    https://themes.redradar.net/aventurine/
+ Description:  Custom child theme of Aventurine
+ Author:       Kiandra Plummer
+ Author URI:   http://kspmultimedia.com
+ Template:     aventurine
+ Version:      1.0.0
+ */
+ 
+@import url("../aventurine/style.css");
+@import url(https://fonts.googleapis.com/css?family=Bubblegum+Sans);
+@import url(https://fonts.googleapis.com/css?family=Cabin);
+@import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+
+
+ /**DISPLAY - NONE **/
+
+
+div.site-branding.container {display: none;} // top of main content
+
+a {color: #f15526!important; text-decoration: none;!important}
+
+a:active, a:link, a:visited, a:hover. a:focus {text-decoration: none;}
+
+ul#menu-unnamed.menu.nav-menu li a:link {text-decoration: none!important; font-family: Courier New, monospace;} // main nav - remove link
+
+video::-webkit-media-controls-start-playback-button {display: none !important;}
+
+div.site-info.container {display: none;}
+
+a.maxbutton-9.maxbutton.maxbutton-direction-button {text-decoration: none!important;} /* back to the top button */
+
+/**TYPE (size, color, etc) **/
+
+h1, h2, h1.front_page, h2.front_page {color: #D64C22!important; font-family: 'Bubblegum Sans', cursive!important;}  /* major portfolio heading for sub sections */
+h3 {color: #F0C02D; font-family: 'Yanone Kaffeesatz', sans-serif; font-weight: bold; line-height: 2.5rem; letter-spacing: .125rem;} /* heading for sub sections */
+
+h2, h3 {font-size: 1.5rem;}
+
+h1.front_page, h2.front_page {line-height: 2.5rem; font-size: 4rem;}
+h1.front_page {margin-top:-5%; padding-bottom:.75%;}
+
+p.italic {font-weight:bold; font-style:italic;}
+
+
+/**MENUS**/
+
+nav#site-navigation.main-navigation.clear {background-color: #315267;} 
+
+button.menu-toggle {font-family: Courier New, monospace;}
+
+li {
+  list-style-type:none;
+  padding-bottom: .125em;
+  line-height: 1.85rem;
+  font-weight: bold;
+  font-size: 1.5rem;
+    }
+
+span.decorative {
+ color: #F0C02D;
+ padding-right: 1%;
+  }
+ 
+span.decorative_img {color:#D64C22; font-weigt: bold;}
+
+
+/** PAGE ELEMENTS  **/
+ 
+.definition, .link, span.bold, .resume {color: #315267; font-weight: bold;} 
+.definition, .resume {letter-spacing: .08rem; font-weight: 900;}
+     
+div#content.site-content.container {
+    background-color: rgba(176, 221, 242, 0.9);
+    border: .35rem solid transparent;
+    border-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/435043/summer_flower-pattern.png) 5% 5% repeat; /* split image for border (w and h) */
+ }
+ 
+ 
+div#secondary.widget-area.container.clear {background-color: rgba(176, 221, 242, 0.0); border: .35rem solid transparent;}
+
+.entry-content, p {color: #315267; font-family: 'Cabin', sans-serif; font-weight: 500;} /* content inside boxes, paragraphs including */
+
+.panel-wrapper {color: #315267;}
+
+body.custom-background {  
+background-image:url('http://www.kspmultimedia.com/wp-content/uploads/2016/05/materialdesign_clouds-1.png');
+background-size: cover;
+-moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-repeat: no-repeat;
+background-position: center center;
+}
+
+
+/**BUTTONS **/
+
+
+.button-block a:hover, .button-block a:focus, .button-block a:active {color: #031526!important; background: #F0C02D!important; text-decoration: none!important;} /* project buttons - view more */
+.button-block a, .button-block a:link  {color: #000000!important; background: #F15526!important; text-decoration: none!important;} 
+
+.button-block a {font-weight: bold;}
+
+.button-block a {border-radius: .5rem!important;}
+
+
+/**MOBILE **/
+
+
+@media (device-height: 568px) and (height: 529px), (device-height: 480px) and (height: 441px) { /* minimal-ui is active */ } 
+
+@media (max-width: 1280px) { 
+
+html, body, li, h3 {height: 100%; min-height: 100%; font-size: 1rem;}
+h1.front_page, h2.front_page, h1 {font-size: 2rem;}
+
+h3 {letter-spacing: .01rem; line-height:1rem;}
+
+body.custom-background {  
+background-image:url('http://www.kspmultimedia.com/wp-content/uploads/2016/05/materialdesign_clouds-1.png');
+min-width: 100%;
+min-height: 100%;
+overflow-y: auto; /* solves problem of not covering entire background for mobile */
+-ms-overflow-y: scroll; /* for internet explorer */
+}
+
+div#content.site-content.container {
+    border: .25rem solid transparent;
+    border-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/435043/summer_flower-pattern.png) 5% 5% repeat;
+}
+
+p.italic {word-spacing: .3%rem;}
+
+}
